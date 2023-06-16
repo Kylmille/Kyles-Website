@@ -4,34 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kyle Miller, Junior Software Developer</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+  <title>Kyle Miller</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
 </head>
 
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="#" class="active">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Home</a>
+          <div class="dropdown-content">
+            <a href="#" id="about-me-link">About Me</a>
+            <a href="#">Personal Projects</a>
+            <a href="#">Experience</a>
+          </div>
+        </li>
         <li><a href="#">About</a></li>
         <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" id="contact-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <section id="about-me-section" class="hidden">
+      <h2>About Me</h2>
+      <p>I am Kyle Miller, a junior software engineer with a passion for web development. I love creating interactive and user-friendly websites and applications. My skills include HTML, CSS, JavaScript, and various web frameworks. I am constantly learning and exploring new technologies to enhance my development abilities.</p>
+    </section>
+
     <section>
-      <h1>Welcome to My Personal Website</h1>
-      <p>This is a basic HTML setup for my first personal webpage project.</p>
+      <div class="profile">
+        <img src="profilepic.webp" alt="Profile Picture">
+      </div>
+      <h1>Welcome to My Website</h1>
+      <p>This is a basic HTML setup for a personal website describing me, Kyle Miller. Junior Software Engineer.</p>
     </section>
   </main>
+
+  <div id="contact-popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Contact Information</h2>
+      <p>Email: Developer.kylemiller@gmail.com</p>
+      <p>Phone: 734-486-0317</p>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2023 My Personal Website. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script> <
+  <script src="script.js"></script> <!-- Link to the external JavaScript file -->
 </body>
 
 </html>
