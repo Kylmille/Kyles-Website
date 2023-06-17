@@ -1,14 +1,14 @@
-
 // JavaScript code to toggle the visibility of the contact popup
 
-// Get the contact link and the popup elements
+// Get the contact link, menu toggle, and the popup elements
 const contactLink = document.getElementById('contact-link');
+const menuToggle = document.querySelector('.menu-toggle');
 const contactPopup = document.getElementById('contact-popup');
 const closeBtn = document.querySelector('.close');
 
 // Function to show the contact popup
 function showContactPopup() {
-  contactPopup.style.display = 'block';
+  contactPopup.style.display = 'flex';
 }
 
 // Function to hide the contact popup
@@ -16,9 +16,16 @@ function hideContactPopup() {
   contactPopup.style.display = 'none';
 }
 
-// Add event listeners to the contact link and close button
+// Function to toggle the mobile menu
+function toggleMobileMenu() {
+  const menu = document.querySelector('.menu ul');
+  menu.classList.toggle('active');
+}
+
+// Add event listeners to the contact link, menu toggle, and close button
 contactLink.addEventListener('click', showContactPopup);
 closeBtn.addEventListener('click', hideContactPopup);
+menuToggle.addEventListener('click', toggleMobileMenu);
 
 // JavaScript code to set the active link
 
